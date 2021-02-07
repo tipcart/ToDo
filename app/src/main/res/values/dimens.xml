@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_padding_horizontal">16dp</dimen>
+    <dimen name="item_padding_double_horizontal">32dp</dimen>
+    <dimen name="item_padding_vertical">8dp</dimen>
+    <dimen name="activity_margin_horizontal">16dp</dimen>
+    <dimen name="activity_margin_vertical">8dp</dimen>
+    <dimen name="image_item_width">128dp</dimen>
+    <dimen name="image_small_item_width">64dp</dimen>
+    <dimen name="card_view_corner_radius">8dp</dimen>
+    <dimen name="card_view_elevation">8dp</dimen>
+</resources>

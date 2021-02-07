@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/item_padding_horizontal"
+    android:layout_marginTop="@dimen/item_padding_vertical"
+    android:layout_marginRight="@dimen/item_padding_horizontal"
+    android:layout_marginBottom="@dimen/item_padding_vertical"
+    android:alpha="0.8"
+    android:background="@color/white"
+    android:clickable="true"
+    android:longClickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    cardView:cardCornerRadius="@dimen/card_view_corner_radius"
+    cardView:cardElevation="@dimen/card_view_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/item_padding_vertical"
+        android:paddingBottom="@dimen/item_padding_vertical">
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/image_small_item_width"
+            android:layout_height="@dimen/image_small_item_width"
+            android:contentDescription="@string/todoImage"
+            android:padding="@dimen/item_padding_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDateOfCreation"
+            style="@style/TextAppearance.Content.Regular.12px"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_padding_horizontal"
+            android:layout_marginRight="@dimen/item_padding_horizontal"
+            android:paddingTop="@dimen/item_padding_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/TextAppearance.Bold.16px"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/item_padding_vertical"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvDateOfCreation"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateOfCreation"
+            tools:text="text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescription"
+            style="@style/TextAppearance.Content.Regular.12px"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/item_padding_vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvDateOfCreation"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            tools:text="text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
